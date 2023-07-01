@@ -9,14 +9,40 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <header>
-            <h1>后排影评</h1>
-            <h2>Backrow Review</h2>
-        </header>
-        <p>后排影评是一个播客节目，请在喜马拉雅或者通用播客客户端搜索“后排影评”</p>
-        <script src=""></script>
-        <a title="喜马拉雅链接" href="https://www.ximalaya.com/album/13031268">后排影评</a>
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src = "images/android-chrome-192x192.png"</a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="">播客</a></li>
+                        <li><a href="">关于</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">联系我们</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <div class="text-box">
+                <h1>不求同，存异即可</h1>
+                <p>
+                    后排影评是一个讨论电影的播客节目
+                </p>
+                <a title="喜马拉雅链接" href="https://www.ximalaya.com/album/13031268" class="hero-btn">后排影评</a>
+            </div>
+        </section>
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
     </body>
 </html>
